@@ -1,0 +1,49 @@
+# Robots.txt for Harshit Shrivastav Portfolio
+# https://harshitshrivastav.eu.org/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://harshitshrivastav.eu.org/sitemap.xml
+
+# Crawl-delay (optional, polite crawling)
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# Disallow common paths (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Host (optional)
+# Host: https://harshitshrivastav.eu.org/
