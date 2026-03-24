@@ -1582,6 +1582,54 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         bigBangSound.play().catch(() => console.log('Sound playback blocked'));
       }
       
+      // Add screen shake and break effects
+      document.body.classList.add('big-bang-shake');
+      document.body.classList.add('screen-flash');
+      
+      // Add broken glass overlay
+      const glassOverlay = document.createElement('div');
+      glassOverlay.className = 'broken-glass-overlay';
+      glassOverlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 99998;
+        background: radial-gradient(circle at ${x}px ${y}px, 
+          transparent 0%, 
+          rgba(255,255,255,0.1) 20%,
+          rgba(255,255,255,0.05) 40%,
+          transparent 60%);
+        animation: glassFlash 0.5s ease-out forwards;
+      `;
+      document.body.appendChild(glassOverlay);
+      
+      // Make all elements shake and tilt
+      const allElements = document.querySelectorAll('section, .tech-card, .project-card, .stat-card, .edu-card, .timeline-item, nav, footer, .marquee-wrapper');
+      allElements.forEach((el, index) => {
+        const randomRotate = (Math.random() - 0.5) * 10;
+        const randomX = (Math.random() - 0.5) * 30;
+        const randomY = (Math.random() - 0.5) * 30;
+        
+        el.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+        el.style.transform = `rotate(${randomRotate}deg) translate(${randomX}px, ${randomY}px)`;
+        el.style.opacity = '0.7';
+        
+        setTimeout(() => {
+          el.style.transform = 'rotate(0deg) translate(0, 0)';
+          el.style.opacity = '1';
+        }, 800 + Math.random() * 400);
+      });
+      
+      // Remove effects after animation
+      setTimeout(() => {
+        document.body.classList.remove('big-bang-shake');
+        document.body.classList.remove('screen-flash');
+        glassOverlay.remove();
+      }, 1500);
+      
       // Main explosion container
       const explosion = document.createElement('div');
       explosion.className = 'supernova-container';
@@ -1842,6 +1890,48 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           opacity: 0;
           border-width: 0px;
         }
+      }
+
+      /* Big Bang Screen Effects */
+      @keyframes screenShake {
+        0%, 100% { transform: translate(0, 0); }
+        10% { transform: translate(-15px, -15px); }
+        20% { transform: translate(15px, 15px); }
+        30% { transform: translate(-15px, 15px); }
+        40% { transform: translate(15px, -15px); }
+        50% { transform: translate(-10px, -10px); }
+        60% { transform: translate(10px, 10px); }
+        70% { transform: translate(-10px, 10px); }
+        80% { transform: translate(10px, -10px); }
+        90% { transform: translate(-5px, -5px); }
+      }
+
+      @keyframes screenFlash {
+        0% { background-color: transparent; }
+        10% { background-color: rgba(255, 255, 255, 0.3); }
+        100% { background-color: transparent; }
+      }
+
+      @keyframes glassFlash {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+
+      @keyframes elementBreak {
+        0% { transform: rotate(0deg) translate(0, 0); opacity: 1; }
+        20% { transform: rotate(5deg) translate(10px, -10px); opacity: 0.8; }
+        40% { transform: rotate(-5deg) translate(-10px, 10px); opacity: 0.7; }
+        60% { transform: rotate(3deg) translate(5px, 5px); opacity: 0.8; }
+        80% { transform: rotate(-3deg) translate(-5px, -5px); opacity: 0.9; }
+        100% { transform: rotate(0deg) translate(0, 0); opacity: 1; }
+      }
+
+      .big-bang-shake {
+        animation: screenShake 1s ease-out;
+      }
+
+      .screen-flash {
+        animation: screenFlash 0.5s ease-out;
       }
     `;
     document.head.appendChild(bigBangStyles);
