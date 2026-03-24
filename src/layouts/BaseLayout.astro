@@ -1,0 +1,96 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  keywords: string;
+  author: string;
+  ogImage?: string;
+  canonicalURL?: string;
+}
+
+const { 
+  title, 
+  description, 
+  keywords, 
+  author, 
+  ogImage = "https://harshitshrivastav.eu.org/og-image.jpg",
+  canonicalURL = "https://harshitshrivastav.eu.org/"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Global Styles -->
+    <style is:global>
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+      :root {
+        --bg: #06060a;
+        --bg-deep: #020204;
+        --surface: #0d0d12;
+        --surface-2: #13131a;
+        --surface-3: #1a1a24;
+        --accent: #e8a838;
+        --accent-glow: #f5d070;
+        --accent-dim: #7a5818;
+        --text: #f0ece4;
+        --text-muted: #8a857e;
+        --text-dim: #4a4540;
+        --border: rgba(232, 168, 56, 0.06);
+        --border-hover: rgba(232, 168, 56, 0.18);
+        --transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      html { scroll-behavior: smooth; font-size: 16px; }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'DM Mono', monospace;
+        overflow-x: hidden;
+        cursor: default;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      ::-webkit-scrollbar { width: 3px; }
+      ::-webkit-scrollbar-track { background: var(--bg); }
+      ::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 4px; }
+      ::selection { background: var(--accent); color: var(--bg); }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
