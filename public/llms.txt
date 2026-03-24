@@ -1,0 +1,119 @@
+# LLMs.txt for Harshit Shrivastav Portfolio
+# This file helps AI assistants and LLMs discover and understand this website's content
+# Learn more: https://llmstxt.org/
+
+version: 1.0
+lastModified: 2026-03-24
+
+# Website Information
+name: Harshit Shrivastav Portfolio
+description: Portfolio of Harshit Shrivastav, a Python Developer and Data Science student
+url: https://harshitshrivastav.eu.org/
+language: en
+author: Harshit Shrivastav
+email: hello@harshitshrivastav.eu.org
+
+# Personal Information
+person:
+  name: Harshit Shrivastav
+  title: Python Developer & Data Science Student
+  location: India
+  skills:
+    - Python
+    - Data Science
+    - Machine Learning
+    - SQL
+    - Flask
+    - PostgreSQL
+    - Redis
+    - Linux
+    - JavaScript
+    - Bash
+    - Open Source Development
+  
+  experience:
+    - role: Founder & Developer
+      company: webmy.site
+      period: 2024 - Present
+      description: Built a platform for creating modern web presences with PHP and MySQL
+    
+    - role: Open Source Contributor
+      company: Various Projects
+      period: 2022 - Present
+      description: Contributed to popular Python open-source projects
+    
+    - role: Freelance Developer
+      company: Independent
+      period: 2020 - 2023
+      description: Developed automation solutions and data pipelines
+
+  education:
+    - degree: BS in Data Science & Applications
+      institution: Data Science Program
+      period: 2024 - 2028
+    
+    - degree: Bachelor of Commerce
+      institution: Commerce & Business
+      period: 2023 - 2026
+
+  projects:
+    - name: AI Video Generator
+      description: Python-based AI Agent that generates learning videos with slides and sound using Microsoft TTS
+      technologies: [Python, AI, TTS]
+    
+    - name: Agency Landing Page
+      description: Visually appealing landing page for a Service Agency
+      technologies: [HTML, CSS, JavaScript]
+    
+    - name: Task Management API
+      description: RESTful API for task management with JWT authentication
+      technologies: [REST API, JWT, Python]
+
+  social:
+    github: https://github.com/Harshit-shrivastav
+    portfolio: https://harshitshrivastav.eu.org/
+    blog: https://www.h-s.site
+
+# Website Sections
+sections:
+  - name: Hero
+    path: /#hero
+    description: Introduction and main heading
+    
+  - name: About
+    path: /#about
+    description: Personal background and statistics
+    
+  - name: Tech
+    path: /#tech
+    description: Technical skills and tools
+    
+  - name: Experience
+    path: /#experience
+    description: Work history and timeline
+    
+  - name: Education
+    path: /#education
+    description: Academic background
+    
+  - name: Projects
+    path: /#projects
+    description: Selected project portfolio
+    
+  - name: Contact
+    path: /#contact
+    description: Contact information and social links
+
+# AI Crawling Preferences
+aiPreferences:
+  allowIndexing: true
+  allowContentExtraction: true
+  preferredCrawlDelay: 1
+  contentFormat: html
+  structuredData: true
+
+# Contact Preferences
+contactPreferences:
+  preferredMethod: email
+  responseTime: 24-48 hours
+  timezone: IST (UTC+5:30)

@@ -1,11 +1,15 @@
 # Robots.txt for Harshit Shrivastav Portfolio
 # https://harshitshrivastav.eu.org/
 
+# Sitemap and LLMs.txt location
+Sitemap: https://harshitshrivastav.eu.org/sitemap.xml
+
+# AI/LLM Discovery Files
+# LLMs.txt: https://harshitshrivastav.eu.org/llms.txt
+# LLMs-Full.txt: https://harshitshrivastav.eu.org/llms-full.txt
+
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://harshitshrivastav.eu.org/sitemap.xml
 
 # Crawl-delay (optional, polite crawling)
 Crawl-delay: 1
@@ -39,6 +43,19 @@ User-agent: facebot
 Allow: /
 
 User-agent: ia_archiver
+Allow: /
+
+# AI/LLM Bots
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 # Disallow common paths (if any in future)

@@ -1,0 +1,124 @@
+# LLMs-Full.txt - Complete Content for AI Discovery
+# Full structured content for AI assistants and LLMs
+# https://harshitshrivastav.eu.org/llms-full.txt
+
+---
+
+# Harshit Shrivastav - Complete Portfolio Content
+
+## Overview
+Harshit Shrivastav is a Python Developer and Data Science student with expertise in Python, SQL, Machine Learning, Flask, PostgreSQL, Redis, and Linux. This portfolio showcases projects, experience, education, and contact information.
+
+## Personal Statement
+I'm a Data Science student with a Commerce background — I love numbers, coding, and economics. Good with Python, SQL, DSA, and tools like Flask, Redis, PostgreSQL, Markdown and WordPress.
+
+Always curious, always learning. I enjoy turning data into something meaningful — and maybe a little impactful. With a unique blend of business acumen and technical skill, I bridge the gap between raw data and real-world decisions.
+
+## Skills & Technologies
+
+### Programming Languages
+- Python (Expert)
+- SQL (Advanced)
+- JavaScript (Intermediate)
+- Bash (Intermediate)
+
+### Frameworks & Libraries
+- Flask (Web Development)
+- Machine Learning Libraries
+- Data Science Tools
+
+### Databases
+- PostgreSQL
+- Redis
+- MySQL
+
+### Environments
+- Linux
+- Windows
+- VS Code
+- Neovim
+
+### Other Skills
+- Open Source Development
+- Data Pipelines
+- ETL Processes
+- Automation
+- Web Development
+
+## Work Experience
+
+### Founder & Developer @ webmy.site (2024 - Present)
+- Built a platform for creating modern web presences
+- Full-stack development with PHP and MySQL
+- Designed system architecture and deployment pipelines
+
+### Open Source Contributor @ Various Projects (2022 - Present)
+- Contributed to popular Python open-source projects
+- Implemented new features and bug fixes
+- Improved documentation and user guides
+
+### Freelance Developer @ Independent (2020 - 2023)
+- Developed automation solutions for clients
+- Built data pipelines and ETL processes
+- Optimized workflows for efficiency
+
+## Education
+
+### BS in Data Science & Applications (2024 - 2028)
+Data Science Program
+- Specialized in machine learning and statistical analysis
+- Advanced Python programming and algorithms
+- Big data technologies and distributed systems
+
+### Bachelor of Commerce (2023 - 2026)
+Commerce & Business
+- Focus on Accounts and Business
+- Minor in Mutual Funds
+- Minor in Income Tax Return
+
+## Projects
+
+### AI Video Generator
+A Python-based AI Agent that can generate learning videos using slides with sound using Microsoft TTS.
+**Technologies:** Python, AI, TTS
+
+### Agency Landing Page
+A visually appealing landing page for a Service Agency with modern design and smooth interactions.
+**Technologies:** HTML, CSS, JavaScript
+
+### Task Management API
+RESTful API for task management with JWT authentication and real-time updates.
+**Technologies:** REST API, JWT, Python
+
+## Statistics
+- 5+ Years Coding
+- 2 Degrees Pursuing
+- 10+ Projects Built
+- ∞ Curiosity
+
+## Contact Information
+- Email: hello@harshitshrivastav.eu.org
+- GitHub: https://github.com/Harshit-shrivastav
+- Portfolio: https://harshitshrivastav.eu.org/
+- Blog: https://www.h-s.site
+
+## Social Links
+- GitHub: https://github.com/Harshit-shrivastav
+- Personal Website: https://harshitshrivastav.eu.org/
+- Blog: https://www.h-s.site
+
+## Availability
+- Open to interesting conversations and collaborations
+- Available for freelance projects
+- Interested in data science and Python development opportunities
+
+## Technical Details
+- Website built with Astro.js
+- Hosted at https://harshitshrivastav.eu.org/
+- Design: Custom dark theme with golden accents
+- Features: Interactive animations, responsive design
+
+---
+
+Last Updated: 2026-03-24
+Content Version: 1.0
