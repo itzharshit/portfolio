@@ -1510,11 +1510,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     // Saturn cursor
     const cursorSaturn = document.getElementById('cursorSaturn');
+    
+    // Initialize cursor position next to nav logo
+    setTimeout(() => {
+      const navLogo = document.querySelector('.nav-logo');
+      if (navLogo) {
+        const navRect = navLogo.getBoundingClientRect();
+        cursorSaturn.style.left = (navRect.right + 20) + 'px';
+        cursorSaturn.style.top = (navRect.top + navRect.height / 2) + 'px';
+      } else {
+        cursorSaturn.style.left = '150px';
+        cursorSaturn.style.top = '32px';
+      }
+      cursorSaturn.style.opacity = '1';
+      cursorSaturn.style.display = 'block';
+    }, 100);
 
     document.addEventListener('mousemove', e => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
-      
+
       cursorSaturn.style.left = e.clientX + 'px';
       cursorSaturn.style.top = e.clientY + 'px';
     });
@@ -1902,8 +1917,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         return;
       }
 
-      const x = e.clientX;
-      const y = e.clientY;
+      // Use pageX/pageY for scroll-aware positioning
+      const x = e.pageX;
+      const y = e.pageY;
 
       // Track clicks - only if within distance of previous click
       const distance = Math.sqrt(
@@ -1940,8 +1956,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       }
 
       const touch = e.touches[0];
-      const x = touch.clientX;
-      const y = touch.clientY;
+      // Use touch page coordinates for scroll-aware positioning
+      const x = touch.pageX;
+      const y = touch.pageY;
 
       // Track taps - only if within distance of previous tap
       const distance = Math.sqrt(
