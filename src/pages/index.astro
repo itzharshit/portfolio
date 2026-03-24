@@ -22,8 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Big Bang Sound Effect -->
   <audio id="bigBangSound" preload="auto">
-    <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=explosion-6265.mp3" type="audio/mpeg">
-    <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=explosion-20547.mp3" type="audio/mpeg">
+    <source src="/bb.mp3" type="audio/mpeg">
   </audio>
 
   <style>
@@ -904,7 +903,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       text-transform: uppercase;
       transition: all var(--transition);
       position: relative;
-      overflow: visible;
+      overflow: hidden;
     }
 
     .contact-link::before {
@@ -1516,10 +1515,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const navLogo = document.querySelector('.nav-logo');
       if (navLogo) {
         const navRect = navLogo.getBoundingClientRect();
-        cursorSaturn.style.left = (navRect.right + 20) + 'px';
+        cursorSaturn.style.left = (navRect.right + 40) + 'px';
         cursorSaturn.style.top = (navRect.top + navRect.height / 2) + 'px';
       } else {
-        cursorSaturn.style.left = '150px';
+        cursorSaturn.style.left = '170px';
         cursorSaturn.style.top = '32px';
       }
       cursorSaturn.style.opacity = '1';
