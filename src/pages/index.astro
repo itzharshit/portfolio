@@ -309,7 +309,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       align-items: center;
       justify-content: center;
       position: relative;
-      overflow: hidden;
       z-index: 2;
     }
 
@@ -433,7 +432,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
 
     /* ══════ SECTIONS ══════ */
-    section { position: relative; z-index: 2; }
+    section {
+      position: relative;
+      z-index: 2;
+    }
 
     .section-inner {
       max-width: 1100px;
@@ -469,7 +471,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     /* ══════ MARQUEE ══════ */
     .marquee-wrapper {
-      overflow: hidden;
+      overflow: visible;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       padding: 18px 0;
@@ -535,7 +537,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       background: rgba(13,13,18,0.8);
       backdrop-filter: blur(12px);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       transition: border-color var(--transition), transform 0.3s;
     }
 
@@ -585,7 +587,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       backdrop-filter: blur(12px);
       text-align: center;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       transition: all var(--transition);
     }
 
@@ -718,7 +720,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       background: rgba(13,13,18,0.8);
       backdrop-filter: blur(12px);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       transition: all var(--transition);
     }
 
@@ -787,7 +789,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       border: 1px solid var(--border);
       background: rgba(13,13,18,0.8);
       backdrop-filter: blur(12px);
-      overflow: hidden;
+      overflow: visible;
       position: relative;
       transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     }
@@ -802,7 +804,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       height: 180px;
       background: rgba(19,19,26,0.6);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       border-bottom: 1px solid var(--border);
     }
 
@@ -902,7 +904,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       text-transform: uppercase;
       transition: all var(--transition);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .contact-link::before {
