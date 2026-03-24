@@ -1832,12 +1832,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     `;
     document.head.appendChild(bigBangStyles);
 
-    // Click handler
+    // Click handler - only count clicks on empty space
     document.addEventListener('click', (e) => {
+      // Ignore clicks on interactive elements
+      if (e.target.closest('a, button, .tech-card, .project-card, .stat-card, .edu-card, .timeline-item, .nav-links a')) {
+        return;
+      }
+
       const x = e.clientX;
       const y = e.clientY;
 
-      // Track clicks
+      // Track clicks - only if within distance of previous click
       const distance = Math.sqrt(
         Math.pow(x - lastClickX, 2) + Math.pow(y - lastClickY, 2)
       );
@@ -1856,6 +1861,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           clickCount = 0;
         }, CLICK_TIMEOUT);
       } else {
+        // Reset if clicked far away
         clickCount = 1;
       }
 
@@ -1863,13 +1869,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       lastClickY = y;
     });
 
-    // Touch support for mobile
+    // Touch support for mobile - only count taps on empty space
     document.addEventListener('touchstart', (e) => {
+      // Ignore taps on interactive elements
+      if (e.target.closest('a, button, .tech-card, .project-card, .stat-card, .edu-card, .timeline-item, .nav-links a')) {
+        return;
+      }
+
       const touch = e.touches[0];
       const x = touch.clientX;
       const y = touch.clientY;
 
-      // Track taps
+      // Track taps - only if within distance of previous tap
       const distance = Math.sqrt(
         Math.pow(x - lastClickX, 2) + Math.pow(y - lastClickY, 2)
       );
@@ -1888,6 +1899,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           clickCount = 0;
         }, CLICK_TIMEOUT);
       } else {
+        // Reset if tapped far away
         clickCount = 1;
       }
 
