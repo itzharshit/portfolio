@@ -1554,15 +1554,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     });
 
     // ═══════════════════════════════════════════
-    // BIG BANG EFFECT - Triple Click
+    // BIG BANG EFFECT - 5 Clicks
     // ═══════════════════════════════════════════
     let clickCount = 0;
     let clickTimer = null;
     let lastClickX = 0;
     let lastClickY = 0;
-    const CLICK_THRESHOLD = 3;
+    const CLICK_THRESHOLD = 5;
     const CLICK_DISTANCE = 200;
-    const CLICK_TIMEOUT = 1500;
+    const CLICK_TIMEOUT = 2000;
 
     // Create massive explosion
     function createMassiveBang(x, y) {
@@ -1836,25 +1836,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     document.addEventListener('click', (e) => {
       const x = e.clientX;
       const y = e.clientY;
-      
-      // Create ripple
-      const ripple = document.createElement('div');
-      ripple.style.cssText = `
-        position: fixed;
-        left: ${x}px;
-        top: ${y}px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: 3px solid var(--accent);
-        box-shadow: 0 0 20px var(--accent);
-        transform: translate(-50%, -50%);
-        animation: rippleExpand 0.6s ease-out forwards;
-        pointer-events: none;
-        z-index: 99998;
-      `;
-      document.body.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 600);
 
       // Track clicks
       const distance = Math.sqrt(
@@ -1887,25 +1868,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const touch = e.touches[0];
       const x = touch.clientX;
       const y = touch.clientY;
-      
-      // Create ripple
-      const ripple = document.createElement('div');
-      ripple.style.cssText = `
-        position: fixed;
-        left: ${x}px;
-        top: ${y}px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: 3px solid var(--accent);
-        box-shadow: 0 0 20px var(--accent);
-        transform: translate(-50%, -50%);
-        animation: rippleExpand 0.6s ease-out forwards;
-        pointer-events: none;
-        z-index: 99998;
-      `;
-      document.body.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 600);
 
       // Track taps
       const distance = Math.sqrt(
