@@ -20,6 +20,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="cursor-planet"></div>
   </div>
 
+  <!-- Big Bang Sound Effect -->
+  <audio id="bigBangSound" preload="auto">
+    <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=explosion-6265.mp3" type="audio/mpeg">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=explosion-20547.mp3" type="audio/mpeg">
+  </audio>
+
   <style>
     /* ══════ FULL-PAGE BACKGROUND CANVAS ══════ */
     #bgCanvas {
@@ -1567,6 +1573,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     // Create massive explosion
     function createMassiveBang(x, y) {
       console.log('💥 SUPERNOVA BIG BANG at', x, y);
+      
+      // Play explosion sound
+      const bigBangSound = document.getElementById('bigBangSound');
+      if (bigBangSound) {
+        bigBangSound.volume = 0.6;
+        bigBangSound.currentTime = 0;
+        bigBangSound.play().catch(() => console.log('Sound playback blocked'));
+      }
       
       // Main explosion container
       const explosion = document.createElement('div');
