@@ -46,7 +46,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .cursor-saturn {
       position: fixed;
       pointer-events: none;
-      z-index: 9999;
+      z-index: 9999999;
       transform: translate(-50%, -50%);
       will-change: left, top;
       width: 60px;
@@ -1589,7 +1589,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       explosion.style.top = y + 'px';
       explosion.style.position = 'fixed';
       explosion.style.pointerEvents = 'none';
-      explosion.style.zIndex = '99999';
+      explosion.style.zIndex = '999999';
+      explosion.style.width = '1px';
+      explosion.style.height = '1px';
       document.body.appendChild(explosion);
 
       // 1. Flash bang - blinding white light
